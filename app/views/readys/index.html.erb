@@ -1,5 +1,7 @@
 <script type="text/javascript">
     $(function() {
+        var TOTAL_KEY = 'total';
+
         var readys_size = <%= @readys.size %>;
         var update_stats = function() {
             var total = $(data_behavior('total')).val();
@@ -16,7 +18,14 @@
                     $count.addClass('near');
                 }
             }
+
+            $.cookie(TOTAL_KEY, total);
         };
+
+        var total = $.cookie(TOTAL_KEY);
+        if (total !== '') {
+            $(data_behavior('total')).val(total);
+        }
 
         update_stats();
 
