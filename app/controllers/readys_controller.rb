@@ -1,14 +1,14 @@
 class ReadysController < ApplicationController
   helper_method :pusher_channel
 
+  after_filter :pusher_trigger, only: %i[reset create destroy]
+
   def index
     @readys = Ready.all
   end
 
   def reset
     Ready.delete_all
-    Pusher.trigger(pusher_channel, "#reset", nil)
-
     redirect_to readys_path
   end
 
@@ -26,6 +26,10 @@ class ReadysController < ApplicationController
   end
 
   protected
+  def pusher_trigger
+    Pusher.trigger(pusher_channel, "##{action_name}", nil)
+  end
+
   def pusher_channel
     "teach"
   end
