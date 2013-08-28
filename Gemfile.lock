@@ -14,6 +14,9 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_attr (0.8.2)
+      activemodel (>= 3.0.2, < 4.1)
+      activesupport (>= 3.0.2, < 4.1)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -30,6 +33,9 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    easy_presenter (1.1.1)
+      rails (>= 3.2)
+      request_store
     erubis (2.7.0)
     execjs (2.0.1)
     hike (1.2.3)
@@ -70,6 +76,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    request_store (1.0.5)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -94,6 +101,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_attr
+  easy_presenter
   jquery-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
