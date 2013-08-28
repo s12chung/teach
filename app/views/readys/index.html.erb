@@ -4,6 +4,18 @@
         var update_stats = function() {
             var total = $(data_behavior('total')).val();
             $('title').html(readys_size + " / " + total);
+
+            var $count = $(data_behavior('count'));
+            $count.removeClass('near done');
+
+            if (total != 0) {
+                if (readys_size/total === 1) {
+                    $count.addClass('done');
+                }
+                else if (readys_size/total >= 0.75) {
+                    $count.addClass('near');
+                }
+            }
         };
 
         update_stats();
@@ -20,7 +32,7 @@
 </script>
 
 <div class="teacher">
-  <div class="count">
+  <div class="count" data-behavior="count">
     <%= @readys.size %> / <%= text_field_tag :total, 10, data: { behavior: "total" } %>
   </div>
   <%= link_to "Reset", reset_readys_path, method: :post, class: "btn btn-primary btn-lg" %>

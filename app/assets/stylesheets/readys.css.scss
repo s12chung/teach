@@ -9,6 +9,20 @@
     font-size: 200px;
     margin-bottom: 40px;
 
+    &.near {
+      &,
+      input {
+        color: gold;
+      }
+    }
+
+    &.done {
+      &,
+      input {
+        color: green;
+      }
+    }
+
     input {
       width: 250px;
     }
