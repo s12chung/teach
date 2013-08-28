@@ -13,5 +13,11 @@ class ReadysController < ApplicationController
 
   def create
     Ready.add
+    redirect_to root_path
+  end
+
+  def destroy
+    Ready.delete
+    redirect_to root_path
   end
 end
