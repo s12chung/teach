@@ -28,4 +28,8 @@ Teach::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  Pusher.app_id = '52873'
+  Pusher.key    = 'aeaa7486dd7e8c6e4e78'
+  Pusher.secret = '17a74dfd0204e880dca4'
 end

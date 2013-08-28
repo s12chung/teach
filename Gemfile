@@ -19,6 +19,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pusher'
 
 gem 'active_attr'
 gem 'easy_presenter'
