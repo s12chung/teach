@@ -2,8 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.btn.student {
-  font-size: 200px;
-  padding: 50px 80px;
-  margin: 50px;
+.teacher {
+  text-align: center;
+
+  .count {
+    font-size: 200px;
+  }
+}
+
+.student {
+  text-align: center;
+  margin-top: 50px;
+
+  .btn.ready {
+    font-size: 200px;
+    padding: 50px 80px;
+  }
 }

@@ -46,7 +46,11 @@ Teach::Application.routes.draw do
   #     resources :products
   #   end
 
-  resources :readys, only: %i[index new create destroy]
+  resources :readys, only: %i[index new create destroy] do
+    collection do
+      post :reset
+    end
+  end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

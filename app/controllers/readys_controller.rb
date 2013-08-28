@@ -1,6 +1,11 @@
 class ReadysController < ApplicationController
   READY_COUNT_KEY = 'ready_count'
 
+  helper_method :ready_count
+
+  def index
+  end
+
   def new
   end
 
