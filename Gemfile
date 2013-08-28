@@ -19,6 +19,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'newrelic_rpm'
+
 gem 'pusher'
 
 gem 'active_attr'
