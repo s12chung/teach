@@ -1,15 +1,27 @@
 <script type="text/javascript">
-    (function() {
+    $(function() {
+        var readys_size = <%= @readys.size %>;
+        var update_stats = function() {
+            var total = $(data_behavior('total')).val();
+            $('title').html(readys_size + " / " + total);
+        };
+
+        update_stats();
+
         var reload = function() { location.reload(); };
         $.each(['#create', '#destroy'], function(index, channel) {
             PUSHER_CHANNEL.bind(channel, reload);
         });
-    })();
+
+        $(data_behavior('total')).blur(function() {
+            update_stats();
+        });
+    });
 </script>
 
 <div class="teacher">
   <div class="count">
-    <%= @readys.size %> / 10
+    <%= @readys.size %> / <%= text_field_tag :total, 10, data: { behavior: "total" } %>
   </div>
   <%= link_to "Reset", reset_readys_path, method: :post, class: "btn btn-primary btn-lg" %>
 </div>
