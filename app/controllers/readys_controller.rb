@@ -6,6 +6,11 @@ class ReadysController < ApplicationController
   def index
   end
 
+  def reset
+    self.ready_count = 0
+    redirect_to readys_path
+  end
+
   def new
   end
 
