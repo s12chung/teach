@@ -27,14 +27,27 @@
       width: 250px;
     }
   }
+
+  .note {
+    display: inline-block;
+    margin-top: 20px;
+
+    width: 700px;
+    height: 700px;
+
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-size: 30px;
+  }
 }
 
 .student {
   text-align: center;
   margin-top: 50px;
 
-  .btn.ready {
-    font-size: 200px;
-    padding: 50px 80px;
+  .note {
+    border-top: 1px solid gray;
+    width: 700px;
+    display: inline-block;
+    text-align: left;
   }
 }

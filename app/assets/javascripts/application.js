@@ -17,3 +17,9 @@
 function data_behavior(behavior) {
     return '[data-behavior~="' + behavior + '"]';
 }
+
+function bind_pusher(channels) {
+    $.each(channels, function(index, channel) {
+        PUSHER_CHANNEL.bind(channel, function() { location.reload(); });
+    });
+}
