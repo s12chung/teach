@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def pusher_trigger
-    Pusher.trigger(pusher_channel, "#{controller_name}##{action_name}", nil)
+    Pusher.trigger(pusher_channel, "#{controller_name}##{action_name}", { readys_size: Ready.all.size })
   end
 
   def pusher_channel

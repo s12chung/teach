@@ -18,8 +18,8 @@ function data_behavior(behavior) {
     return '[data-behavior~="' + behavior + '"]';
 }
 
-function bind_pusher(channels) {
+function bind_pusher(channels, f) {
     $.each(channels, function(index, channel) {
-        PUSHER_CHANNEL.bind(channel, function() { location.reload(); });
+        PUSHER_CHANNEL.bind(channel, f);
     });
 }
