@@ -29,6 +29,9 @@ gem 'easy_presenter'
 
 gem 'redcarpet'
 
+gem 'memcachier'
+gem 'dalli'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

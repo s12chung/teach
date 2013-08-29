@@ -33,6 +33,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    dalli (2.6.4)
     easy_presenter (1.1.1)
       rails (>= 3.2)
       request_store
@@ -49,6 +50,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.24)
     multi_json (1.7.9)
     newrelic_rpm (3.6.6.147)
@@ -110,8 +112,10 @@ PLATFORMS
 
 DEPENDENCIES
   active_attr
+  dalli
   easy_presenter
   jquery-rails
+  memcachier
   newrelic_rpm
   pusher
   rails (= 3.2.13)
