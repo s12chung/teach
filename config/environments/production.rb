@@ -63,6 +63,5 @@ Teach::Application.configure do
 
   Pusher.encrypted = true
 
-  config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"].split(","),
-      { username: ENV["MEMCACHIER_USERNAME"], password: ENV["MEMCACHIER_PASSWORD"] }
+  config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"].split(","), { username: ENV["MEMCACHIER_USERNAME"], password: ENV["MEMCACHIER_PASSWORD"] }
 end
